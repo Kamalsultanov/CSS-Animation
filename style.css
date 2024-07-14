@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./images/bodyImg.jpg);
+    height: 100vh;
+    
+}
+#sun{
+    background: url(./images/sun.png) center no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    animation: sun 150s linear infinite;
+    z-index: 2;
+}
+
+#earth{ 
+    background: url(./images/earth.png) center no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    animation: earth 20s linear infinite;
+    z-index: 2;
+}
+#moon{
+    background: url(./images/moon.jpg) center no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    animation: moon 20s linear infinite;
+    transform-origin: 50px 50px;
+    z-index: 2;
+}
+.star{background: url(./images/Untitled-3.png) center no-repeat;
+    background-size:contain;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    opacity: 1;
+    animation:  star linear 5s  forwards;
+}
+
+.move1 {     animation:  star linear 5s  forwards; }
+.move2 {     animation:  star2 linear 5s  forwards; }
+.move3 {     animation:  star3 linear 5s  forwards; }
+#starss {
+    height:100%;
+    width: 100%;
+    opacity: 0.4;
+    animation:  burning 0.2s infinite ;
+}
+
+@keyframes sun {
+    0%{ transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes earth{
+    0%{  transform: rotate(0deg) translate(220px, 0) ;}
+    100%{   transform: rotate(360deg) translate(220px, 0);}
+}
+@keyframes moon{
+    0%{  transform: rotate(0deg) translate(100px, 70px);}
+    100%{   transform: rotate(360deg) translate(100px, 70px);}
+}
+@keyframes star{
+    0%{ top: 0%; right: 10%;}
+    100% { top: 70%; right:30%; display: none; }
+}
+@keyframes star2{
+    0%{ top: 0%; right: 10%;}
+    100% { top:20%; right:70%; display: none; }
+}
+@keyframes star3{
+    0%{ top: 0%; right: 10%;}
+    100% { top:70%; right:50%; display: none; }
+}
+@keyframes burning{ 
+    0% { opacity: 0.4;}
+    100% { opacity: 1;}
+}
